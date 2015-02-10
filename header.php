@@ -22,7 +22,7 @@
 		} ?></title>
 		
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/css/foundation.css" />
-
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C700%7CRoboto+Slab%3A400%2C700&#038' rel='stylesheet' type='text/css'>
 		<link rel="icon" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/favicon.ico" type="image/x-icon">
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-144x144-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-114x114-precomposed.png">
@@ -45,7 +45,7 @@
 		</section>
 		<section class="middle tab-bar-section">
 			
-			<h1 class="title"><?php bloginfo( 'name' ); ?></h1>
+			<h4 class="title"><?php bloginfo( 'name' ); ?></h4>
 
 		</section>
 	</nav>
