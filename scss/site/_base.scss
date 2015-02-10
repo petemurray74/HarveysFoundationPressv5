@@ -1,9 +1,23 @@
-/* 
 
- Basic styles for FoundationPress demo site
+/* -------------------------------------------
+Typography 
+---------------------------------------------*/
 
-*/
+h1,h2,h3,h4,h5,h6{
+letter-spacing:-0.05em;
+}
 
+h5 {
+text-transform:uppercase;
+}
+
+body {
+letter-spacing: -0.02em;
+}
+
+/* -------------------------------------------
+Styles inherited from FoundationPress demo site 
+---------------------------------------------*/
 
 // Reset margin and padding on figure element
 figure { 
@@ -75,23 +89,3 @@ img.alignright {
 	}
 }
 
- // Hero
-
-#homepage-hero {
-	background: url("http://foundation.zurb.com/assets/img/marquee-stars.svg") repeat scroll 0 0 #074E68;
-	padding: rem-calc(20) 0;
-	margin: - rem-calc(32) 0 rem-calc(32);
-	position: relative;
-	text-align: left;
-	height: auto;
-
-		h1 a, h4 { color: #fff; }
-
-		.floatingyeti img {
-			max-width: 30%;
-			position: absolute;
-			right: rem-calc(100);
-		}
-
-		.download { margin-top: rem-calc(20); }
-	}
