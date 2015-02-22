@@ -33,8 +33,12 @@ cd your-theme-name
 npm install && bower install && grunt build
 ```
 
-Tip: If you get an error saying Permission denied (publickey) when cloning the repository, use the https protocol instead:
+**Tip 1:** 
+If you get an error saying Permission denied (publickey) when cloning the repository, use the https protocol instead:
 ```git clone https://github.com/olefredrik/FoundationPress.git```
+
+**Tip 2:**
+If you get a fatal error during installation, it might be related to a libsass incompability issue with the latest version of nodejs. Check the guide at the bottom of this page: https://github.com/olefredrik/FoundationPress/issues/209
 
 While you're working on your project, run:
 
@@ -82,18 +86,26 @@ Check for Foundation Updates? Run:
 
 * [Harvard Center for Green Buildings and Cities](http://www.harvardcgbc.org/)
 * [Parent-Child Home Program](http://www.parent-child.org/)
-* [Arch Design](http://archdesign.grafique.cz/)
-* [Hip and Healthy](http://hipandhealthy.com)
+* [Hip and Healthy](http://hipandhealthy.com/)
 * [Thinx Underwear](http://www.shethinx.com/)
 * [Threadbird blog](http://blog.threadbird.com/)
 * [Code Cub](http://www.thecodecub.com/)
 * [Public House Wines](http://publichousewines.hstestsite.info/)
-* [Bristol Doors Open Day 2014](http://www.bristoldoorsopenday.org/)
-* [Franchise Career Advisors](http://franchisecareeradvisors.com)
-* [Le saint](http://www.lesaint.ca)
+* [Franchise Career Advisors](http://franchisecareeradvisors.com/)
+* [Le saint](http://www.lesaint.ca/)
 * [Help blog](http://help.com/blog/)
-* [Maren Schmidt](http://marenschmidt.com)
-* [Ciancimino Gallery](http://ciancimino.com)
+* [Maren Schmidt](http://marenschmidt.com/)
+* [Ciancimino Gallery](http://ciancimino.com/)
+* [Sokolove Law](http://www.sokolovelaw.com/)
+* [Pandora Children's Parties](http://www.pandorachildrensparties.co.uk/)
+* [The Rainbow Venues](http://www.therainbowvenues.co.uk/)
+* [Ameronix](http://www.ameronix.com/)
+* [Finnerodja](http://www.finnerodja.se/)
+* [Nufloors](http://www.nufloors.ca/)
+* [Glossop Cartons](http://www.glossopcartons.co.uk/)
+* [Ready4Work](http://www.ready4work.my/)
+* [Process](http://www.processeq.net/)
+* [Just Legal](http://www.justlegal.co.jp/en/)
 
 ## Contributing
 #### Here are ways to get involved:

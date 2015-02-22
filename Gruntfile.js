@@ -29,7 +29,32 @@ module.exports = function(grunt) {
         dest: 'js/vendor/'
       },
 
+      iconfonts: {
+        expand: true,
+        cwd: 'bower_components/fontawesome/',
+        src: ['**', '!**/less/**', '!**/css/**', '!bower.json'],
+        dest: 'assets/fontawesome/'
+      },
+
     },
+
+
+      'string-replace': {
+
+        fontawesome: {
+          files: {
+            'assets/fontawesome/scss/_variables.scss': 'assets/fontawesome/scss/_variables.scss'
+          },
+          options: {
+            replacements: [
+              {
+                pattern: '../fonts',
+                replacement: '../assets/fontawesome/fonts'
+              }
+            ]
+          }
+        },
+      },
 
     concat: {
         options: {
@@ -59,11 +84,11 @@ module.exports = function(grunt) {
           'bower_components/foundation/js/foundation/foundation.tooltip.js',
           'bower_components/foundation/js/foundation/foundation.topbar.js',
           
-          // Using all of your custom js files
+          // Include your own custom scripts (located in the custom folder)
           'js/custom/*.js'
           
           ],
-          // Concat all the files above into one single file
+          // Finally, concatinate all the files above into one single file
           dest: 'js/foundation.js',
         },
       },
@@ -92,7 +117,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-string-replace');
 
-  grunt.registerTask('build', ['sass', 'copy', 'concat', 'uglify']);
+  grunt.registerTask('build', ['copy', 'string-replace:fontawesome', 'sass', 'concat', 'uglify']);
   grunt.registerTask('default', ['watch']);
 };
