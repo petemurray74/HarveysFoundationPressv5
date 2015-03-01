@@ -116,9 +116,9 @@ $include-html-global-classes: $include-html-classes;
 // $black       : #000000;
 
 // We use these as default colors throughout
-$primary-color: #AD0F35;
-$secondary-color: #21759b;
-$alert-color: #21759b;
+//$primary-color: #AD0F35;
+//$secondary-color: #21759b;
+//$alert-color: #21759b;
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
@@ -129,9 +129,9 @@ $alert-color: #21759b;
 //$harveys-tertiary:#BAB023; //mustard
 
 // We use these to control various global styles
-$body-bg: #eeeeee;
+//$body-bg: #eeeeee;
 // $body-font-color: $jet;
-$body-font-family: 'Open Sans', sans-serif;
+//$body-font-family: 'Open Sans', sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
@@ -200,23 +200,23 @@ $body-font-family: 'Open Sans', sans-serif;
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-$header-font-family: 'Roboto Slab', serif;
+//$header-font-family: 'Roboto Slab', serif;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
-$header-font-color: #444444;
+//$header-font-color: #444444;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
-$header-bottom-margin: .1rem;
+//$header-bottom-margin: .1rem;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
 // using major scale from http://type-scale.com/
-$h1-font-size: rem-calc(39);
-$h2-font-size: rem-calc(31);
-$h3-font-size: rem-calc(25);
-$h4-font-size: rem-calc(20);
-$h5-font-size: rem-calc(16);
-$h6-font-size: rem-calc(14);
+//$h1-font-size: rem-calc(39);
+//$h2-font-size: rem-calc(31);
+//$h3-font-size: rem-calc(25);
+//$h4-font-size: rem-calc(20);
+//$h5-font-size: rem-calc(16);
+//$h6-font-size: rem-calc(14);
 
 // We use these to control header size reduction on small screens
 // $h1-font-reduction: rem-calc(10) !default;
@@ -241,8 +241,8 @@ $h6-font-size: rem-calc(14);
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: $font-weight-normal;
 // $paragraph-font-size: 1rem;
-$paragraph-line-height: rem-calc(26);
-$paragraph-margin-bottom: rem-calc(26);
+//$paragraph-line-height: rem-calc(26);
+//$paragraph-margin-bottom: rem-calc(26);
 // $paragraph-aside-font-size: rem-calc(14);
 // $paragraph-aside-line-height: 1.35;
 // $paragraph-aside-font-style: italic;
@@ -259,8 +259,8 @@ $paragraph-margin-bottom: rem-calc(26);
 // $code-padding: rem-calc(2) rem-calc(5) rem-calc(1);
 
 // We use these to style anchors
-$anchor-text-decoration: underline;
-$anchor-text-decoration-hover: none;
+//$anchor-text-decoration: underline;
+//$anchor-text-decoration-hover: none;
 // $anchor-font-color: $primary-color;
 // $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
 
@@ -453,7 +453,7 @@ $anchor-text-decoration-hover: none;
 // We use these to control button border and hover styles.
 // $button-border-width: 0px;
 // $button-border-style: solid;
-$button-bg-color: $primary-color;
+//$button-bg-color: $primary-color;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
@@ -977,7 +977,7 @@ $button-bg-color: $primary-color;
 // $panel-font-color-alt: $white;
 
 // $panel-header-adjust: true;
-$callout-panel-link-color:$secondary-color;
+//$callout-panel-link-color:$secondary-color;
 
 // 22. Pricing Tables
 // - - - - - - - - - - - - - - - - - - - - - - - - -

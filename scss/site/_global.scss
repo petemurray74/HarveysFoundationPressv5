@@ -3,11 +3,32 @@
  Demo: http://foundationpress.olefredrik.com
 */
 
-// Prettify type rendering
+//----- TYPOGRAPHY-------------------//
 body {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 }
+
+h1,h2,h3,h4,h5,h6{
+letter-spacing:-0.05em;
+}
+
+h5 {
+text-transform:uppercase;
+}
+
+body {
+letter-spacing: -0.02em;
+}
+
+//----------SUB HEADER ----------------//
+
+.harvey-sub-head-wrap {
+    background: #ffffff;
+}
+
+
+//----------CONTENT AREA-------------------------//
 
 // Reset margin and padding on figure element
 figure { 
@@ -50,4 +71,10 @@ img.alignleft {
 blockquote.alignright,
 img.alignright {
 	margin: rem-calc(7) 0 rem-calc(7) rem-calc(24);
+}
+
+//----------FOOTER-------------------------//
+
+.harveys-foot-wrap{
+    background: $primary-color;
 }

@@ -4,8 +4,8 @@
 */
 
 // We use these to define default font stacks
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-$font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+$font-family-sans-serif: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif: 'Roboto Slab', Georgia, Cambria, "Times New Roman", Times, serif;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
@@ -33,20 +33,48 @@ $jet         : #222222;
 $black       : #000000;
 
 // We use these as default colors throughout
-$primary-color: #008CBA;
-$secondary-color: #e7e7e7;
-$alert-color: #f04124;
+$primary-color: #AD0F35;
+$secondary-color: #21759b;
+$alert-color: #21759b;
 $success-color: #43AC6A;
 $warning-color: #f08a24;
 $info-color: #a0d3e8;
 
 // We use these to control various global styles
-$body-bg: $white;
+$body-bg: #eeeeee;
 $body-font-color: $jet;
 $body-font-family: $font-family-sans-serif;
 $body-font-weight: $font-weight-normal;
 $body-font-style: normal;
 
 $header-font-weight: 300;
+$header-font-family: $font-family-serif;
 $header-text-rendering: optimizeLegibility;
+$header-font-color: #444444;
+$header-bottom-margin: .1rem;
+
+$h1-font-size: rem-calc(39);
+$h2-font-size: rem-calc(31);
+$h3-font-size: rem-calc(25);
+$h4-font-size: rem-calc(20);
+$h5-font-size: rem-calc(16);
+$h6-font-size: rem-calc(14);
+
+$paragraph-line-height: rem-calc(26);
+$paragraph-margin-bottom: rem-calc(26);
+
+$anchor-text-decoration: underline;
+$anchor-text-decoration-hover: none;
+
+$button-bg-color: $primary-color;
+
+$callout-panel-link-color:$secondary-color;
+
+$topbar-margin-bottom: 0;
 $topbar-link-weight: bold;
+$topbar-height: rem-calc(40);
+$topbar-bg-color: $primary-color;
+$topbar-dropdown-link-bg: $primary-color; //background of dropdown menu
+$topbar-dropdown-link-bg-hover: scale-color($primary-color, $lightness: -14%);
+$topbar-link-bg-active: scale-color($primary-color, $lightness: 4%);
+$topbar-link-bg-hover: scale-color($primary-color, $lightness: -14%);

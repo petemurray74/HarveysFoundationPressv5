@@ -1,16 +1,32 @@
 // Add some whitespace between top bar and content
-.top-bar-container, .tab-bar {
-	margin-bottom: rem-calc(32);
-}
 
 .top-bar .name {
 	h1 a { font-weight: 500; }
 }
 
-// A more subtle background color for the active menu item
-.top-bar-section li.active:not(.has-form) a:not(.button)  {
-	background: #272727;
+.top-bar a{
+    text-decoration: none
 }
-.top-bar-section li.active:not(.has-form) a:hover:not(.button) {
-	background: #202020;
+
+
+
+//-----------SECOND MENU-------//
+
+.secondary-menu {
+    margin-top:0.5rem;
+}
+
+.secondary-menu li a {
+text-decoration: none;
+color: #333;
+font-size: 0.8125rem;
+}
+
+.secondary-menu li {
+display: inline-block;
+margin: 0 10px 0 0;
+margin: 0 0.7143rem 0 0;
+border-right: 1px dotted #9e1b3c;
+padding: 0 10px 0 0;
+padding: 0 0.7143rem 0 0;
 }
