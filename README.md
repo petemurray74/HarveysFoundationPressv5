@@ -19,7 +19,12 @@ Bower is a package manager used by Zurb to distribute Foundation. When you have 
 
 **Okay, so you'll need to have the following items installed before continuing.**
 
-  * [Node.js](http://nodejs.org): Use the installer provided on the NodeJS website.
+  * [Node.js](http://nodejs.org): Due to an unresolved incompability issue with node-sass, we will need to use Node v. 0.10.33 (stable). [See this issue for a more detailed description](https://github.com/zurb/foundation-libsass-template/issues/16#issuecomment-76017152)
+    * [Mac installer](https://nodejs.org/dist/v0.10.33/node-v0.10.33.pkg)
+    * [Windows installer](https://nodejs.org/dist/v0.10.33/node-v0.10.33-x86.msi)
+    * [Windows x64 installer](https://nodejs.org/dist/v0.10.33/x64/node-v0.10.33-x64.msi)
+    * [Other release files](https://nodejs.org/dist/v0.10.33/)
+    * [Documentation](https://nodejs.org/docs/v0.10.33/api/)
   * [Grunt](http://gruntjs.com/): Run `[sudo] npm install -g grunt-cli`
   * [Bower](http://bower.io): Run `[sudo] npm install -g bower`
 
@@ -82,14 +87,13 @@ Check for Foundation Updates? Run:
 * [Learn to use the _settings file to change almost every aspect of a Foundation site](http://zurb.com/university/lessons/66)
 * [Other lessons from Zurb University](http://zurb.com/university/past-lessons)
 
-## Examples of sites built using FoundationPress
+## A selection of sites built with FoundationPress
 
 * [Harvard Center for Green Buildings and Cities](http://www.harvardcgbc.org/)
 * [Parent-Child Home Program](http://www.parent-child.org/)
 * [Hip and Healthy](http://hipandhealthy.com/)
 * [Thinx Underwear](http://www.shethinx.com/)
 * [Threadbird blog](http://blog.threadbird.com/)
-* [Code Cub](http://www.thecodecub.com/)
 * [Public House Wines](http://publichousewines.hstestsite.info/)
 * [Franchise Career Advisors](http://franchisecareeradvisors.com/)
 * [Le saint](http://www.lesaint.ca/)
@@ -104,8 +108,10 @@ Check for Foundation Updates? Run:
 * [Nufloors](http://www.nufloors.ca/)
 * [Glossop Cartons](http://www.glossopcartons.co.uk/)
 * [Ready4Work](http://www.ready4work.my/)
-* [Process](http://www.processeq.net/)
 * [Just Legal](http://www.justlegal.co.jp/en/)
+* [Vintage and Stuff](http://vintageandstuff.com/)
+* [Software for FM](http://softwareforfm.co.uk/)
+
 
 ## Contributing
 #### Here are ways to get involved:
@@ -131,6 +137,7 @@ Pull requests are highly appreciated. About a dozen people have written parts of
 
 ## Tutorials
 
+* [Installing FoundationPress - video tutorial](https://www.youtube.com/watch?v=s4m5wwM4BWM#t=11)
 * [Build a responsive WordPress theme](http://www.webdesignermag.co.uk/tutorials/build-a-responsive-wordpress-theme/)
 * [Setting Up a Blog with Foundation and WordPress](http://www.thecodecub.com/htmlcss/setting-up-a-blog-with-foundation-and-wordpress/)
 
