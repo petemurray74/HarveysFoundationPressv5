@@ -1,9 +1,9 @@
 <div class="harvey-sub-head-wrap">
     <div class="row">
-        <div class="large-3 small-12 columns">
-            logo
+        <div class="large-4 small-12 columns">
+            <a href="/"></a><img src="/wp-content/themes/HarveysFoundationPress/assets/img/Harveys_logo.png" width="250" height="58"></a>
         </div>
-        <div class="large-9 small-12 columns">
+        <div class="large-8 small-12 columns">
             <ul class="secondary-menu right">
                 <li><a href="/">Home</a></li>
                 <li><a href="/news/">News</a></li>
