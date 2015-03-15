@@ -8,7 +8,9 @@
     text-decoration: none
 }
 
-
+.top-bar ul li.divider:first-child {
+border-right: 0;
+}
 
 //-----------SECOND MENU-------//
 
@@ -24,9 +26,13 @@ font-size: 0.8125rem;
 
 .secondary-menu li {
 display: inline-block;
-margin: 0 10px 0 0;
-margin: 0 0.7143rem 0 0;
-border-right: 1px dotted #9e1b3c;
-padding: 0 10px 0 0;
-padding: 0 0.7143rem 0 0;
+border-right: 1px dotted #d8d8d8;
+margin: 0 8px 0 0;
+margin: 0 rem-calc(8) 0 0;
+padding: 0 8px 0 0;
+padding: 0 rem-calc(8) 0 0;
+}
+
+.secondary-menu li:last-child {
+border-right: none;
 }
