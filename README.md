@@ -19,12 +19,7 @@ Bower is a package manager used by Zurb to distribute Foundation. When you have 
 
 **Okay, so you'll need to have the following items installed before continuing.**
 
-  * [Node.js](http://nodejs.org): Due to an unresolved incompability issue with node-sass, we will need to use Node v. 0.10.33 (stable). [See this issue for a more detailed description](https://github.com/zurb/foundation-libsass-template/issues/16#issuecomment-76017152)
-    * [Mac installer](https://nodejs.org/dist/v0.10.33/node-v0.10.33.pkg)
-    * [Windows installer](https://nodejs.org/dist/v0.10.33/node-v0.10.33-x86.msi)
-    * [Windows x64 installer](https://nodejs.org/dist/v0.10.33/x64/node-v0.10.33-x64.msi)
-    * [Other release files](https://nodejs.org/dist/v0.10.33/)
-    * [Documentation](https://nodejs.org/docs/v0.10.33/api/)
+  * [Node.js](http://nodejs.org)
   * [Grunt](http://gruntjs.com/): Run `[sudo] npm install -g grunt-cli`
   * [Bower](http://bower.io): Run `[sudo] npm install -g bower`
 
@@ -61,9 +56,9 @@ Check for Foundation Updates? Run:
 
   * `scss/foundation.scss`: Imports for Foundation components and your custom styles.
   * `scss/config/_settings.scss`: Original Foundation 5 base settings
-  * `scss/assets/_icons.scss`: Foundation Icons
-  * `scss/site/_base.scss`: Basic styles for FoundationPress. These can be replaced by your needs.
-
+  * `scss/config/_custom-settings.scss`: Copy the settings you will modify to this file. Make it your own
+  * `scss/site/*.scss`: Unleash your creativity and make it look perfect. Create the files you need (and remember to make import statements for all your files in scss/foundation.scss)
+  
   * `css/foundation.css`: All Sass files are minified and compiled to this file
   * `css/foundation.css.map`: CSS source maps
 
@@ -78,10 +73,13 @@ Check for Foundation Updates? Run:
   * Please note that you must run `grunt build` in your terminal for the script to be copied and concatinated. See [Gruntfile.js](https://github.com/olefredrik/FoundationPress/blob/master/Gruntfile.js) for details
 
 ## Demo
-
 * [Clean FoundationPress install](http://foundationpress.olefredrik.com/)
 * [FoundationPress Kitchen Sink - see every single element in action](http://foundationpress.olefredrik.com/kitchen-sink/)
-* [FoundationPSD - Photoshop template for Foundation](http://foundationpress.olefredrik.com/downloads/foundation-psd-template/)
+
+## Tools
+* [FoundationPSD - Foundation UI Kit for Photoshop](http://foundationpress.olefredrik.com/downloads/foundation-psd-template/)
+* [Foundation UI Kit for Axure RP](https://gumroad.com/l/foundation-ui-kit-axure-rp)
+* [Installing FoundationPress - video tutorial](https://www.youtube.com/watch?v=s4m5wwM4BWM#t=11)
 
 ## How to make Foundation your own
 * [Learn to use the _settings file to change almost every aspect of a Foundation site](http://zurb.com/university/lessons/66)
@@ -111,7 +109,7 @@ Check for Foundation Updates? Run:
 * [Just Legal](http://www.justlegal.co.jp/en/)
 * [Vintage and Stuff](http://vintageandstuff.com/)
 * [Software for FM](http://softwareforfm.co.uk/)
-
+* [WP Diamonds](http://www.wpdiamonds.com/)
 
 ## Contributing
 #### Here are ways to get involved:
@@ -120,7 +118,7 @@ Check for Foundation Updates? Run:
 2. Answer questions that come through [GitHub issues](https://github.com/olefredrik/FoundationPress/issues)
 3. Report a bug that you find
 4. Share a theme you've built on top of FoundationPress
-5. [Tweet](https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Ffoundationpress.olefredrik.com%2F&text=Check%20out%20FoundationPress%2C%20the%20ultimate%20%23WordPress%20starter-theme%20built%20on%20%23Foundation%205&tw_p=tweetbutton&url=http%3A%2F%2Ffoundationpress.olefredrik.com&via=olefredrik) and [blog](http://www.justinfriebel.com/my-first-experience-with-foundationpress-a-wordpress-starter-theme-106/) about the advantages (and criticisms) of FoundationPress
+5. [Tweet](https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Ffoundationpress.olefredrik.com%2F&text=Check%20out%20FoundationPress%2C%20the%20ultimate%20%23WordPress%20starter-theme%20built%20on%20%23Foundation%205&tw_p=tweetbutton&url=http%3A%2F%2Ffoundationpress.olefredrik.com&via=olefredrik) and [blog](http://www.justinfriebel.com/my-first-experience-with-foundationpress-a-wordpress-starter-theme-106/) your experience of FoundationPress.
 
 #### Pull Requests
 
@@ -135,9 +133,8 @@ Pull requests are highly appreciated. About a dozen people have written parts of
 * [Zurb Foundation Docs](http://foundation.zurb.com/docs/)
 * [WordPress Codex](http://codex.wordpress.org/)
 
-## Tutorials
+## Reviews
 
-* [Installing FoundationPress - video tutorial](https://www.youtube.com/watch?v=s4m5wwM4BWM#t=11)
 * [Build a responsive WordPress theme](http://www.webdesignermag.co.uk/tutorials/build-a-responsive-wordpress-theme/)
 * [Setting Up a Blog with Foundation and WordPress](http://www.thecodecub.com/htmlcss/setting-up-a-blog-with-foundation-and-wordpress/)
-
+* [FoundationPress un starter theme pour WordPress (fr)](http://www.leblogduresponsivedesign.fr/developpement/foundationpress-un-starter-theme-pour-wordpress/)
