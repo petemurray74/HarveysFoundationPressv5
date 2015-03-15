@@ -87,41 +87,42 @@ $include-html-global-classes: $include-html-classes;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-// $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-// $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
-// $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+$font-family-sans-serif: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif: 'Roboto Slab', Georgia, Cambria, "Times New Roman", Times, serif;
+$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
-// $font-weight-normal: normal !default;
-// $font-weight-bold: bold !default;
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
 
-// $white       : #FFFFFF;
-// $ghost       : #FAFAFA;
-// $snow        : #F9F9F9;
-// $vapor       : #F6F6F6;
-// $white-smoke : #F5F5F5;
-// $silver      : #EFEFEF;
-// $smoke       : #EEEEEE;
-// $gainsboro   : #DDDDDD;
-// $iron        : #CCCCCC;
-// $base        : #AAAAAA;
-// $aluminum    : #999999;
-// $jumbo       : #888888;
-// $monsoon     : #777777;
-// $steel       : #666666;
-// $charcoal    : #555555;
-// $tuatara     : #444444;
-// $oil         : #333333;
-// $jet         : #222222;
-// $black       : #000000;
+$white       : #FFFFFF;
+$ghost       : #FAFAFA;
+$snow        : #F9F9F9;
+$vapor       : #F6F6F6;
+$white-smoke : #F5F5F5;
+$silver      : #EFEFEF;
+$smoke       : #EEEEEE;
+$gainsboro   : #DDDDDD;
+$iron        : #CCCCCC;
+$base        : #AAAAAA;
+$aluminum    : #999999;
+$jumbo       : #888888;
+$monsoon     : #777777;
+$steel       : #666666;
+$charcoal    : #555555;
+$tuatara     : #444444;
+$oil         : #333333;
+$jet         : #222222;
+$black       : #000000;
+
 
 // We use these as default colors throughout
-//$primary-color: #AD0F35;
-//$secondary-color: #21759b;
-//$alert-color: #21759b;
-// $success-color: #43AC6A;
-// $warning-color: #f08a24;
-// $info-color: #a0d3e8;
+$primary-color: #AD0F35;
+$secondary-color: #21759b;
+$alert-color: #21759b;
+$success-color: #43AC6A;
+$warning-color: #f08a24;
+$info-color: #a0d3e8;
 
 //$harveys-red:#AD0F35;
 //$harveys-secondary:#21759b; //dark teal
@@ -129,11 +130,11 @@ $include-html-global-classes: $include-html-classes;
 //$harveys-tertiary:#BAB023; //mustard
 
 // We use these to control various global styles
-//$body-bg: #eeeeee;
-// $body-font-color: $jet;
-//$body-font-family: 'Open Sans', sans-serif;
-// $body-font-weight: $font-weight-normal;
-// $body-font-style: normal;
+$body-bg: #f6f6f6;
+$body-font-color: $jet;
+$body-font-family: $font-family-sans-serif;
+$body-font-weight: $font-weight-normal;
+$body-font-style: normal;
 
 // We use this to control font-smoothing
 // $font-smoothing: antialiased;
@@ -156,13 +157,24 @@ $include-html-global-classes: $include-html-classes;
 // d. Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $small-range: (0em, 40em);
-// $medium-range: (40.063em, 64em);
-// $large-range: (64.063em, 90em);
+// $small-range: (0em, 40em); //MENU COLLAPSES
+$medium-range: (40.063em, 48em);
+$large-range: (48.063em, 90em);
+// top bar breakpoint chnaged by using show-for-large-up classes etc (see header.php)
+
 // $xlarge-range: (90.063em, 120em);
 // $xxlarge-range: (120.063em, 99999999em);
 
-// $screen: "only screen";
+// 40em=640
+// 64=1024 (ipad landscape)
+// 90=1440
+// 48=768
+// iphone portrait 320 - land 480
+// ipad port 768 - land 124
+
+
+
+$screen: "only screen";
 
 // $landscape: "#{$screen} and (orientation: landscape)";
 // $portrait: "#{$screen} and (orientation: portrait)";
@@ -200,23 +212,23 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-//$header-font-family: 'Roboto Slab', serif;
-// $header-font-weight: $font-weight-normal;
+$header-font-family: $font-family-serif;
+$header-font-weight: 300;
 // $header-font-style: normal;
-//$header-font-color: #444444;
+$header-font-color: #444444;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
-//$header-bottom-margin: .1rem;
-// $header-text-rendering: optimizeLegibility;
+$header-bottom-margin: .1rem;
+$header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
 // using major scale from http://type-scale.com/
-//$h1-font-size: rem-calc(39);
-//$h2-font-size: rem-calc(31);
-//$h3-font-size: rem-calc(25);
-//$h4-font-size: rem-calc(20);
-//$h5-font-size: rem-calc(16);
-//$h6-font-size: rem-calc(14);
+$h1-font-size: rem-calc(39);
+$h2-font-size: rem-calc(31);
+$h3-font-size: rem-calc(25);
+$h4-font-size: rem-calc(20);
+$h5-font-size: rem-calc(16);
+$h6-font-size: rem-calc(14);
 
 // We use these to control header size reduction on small screens
 // $h1-font-reduction: rem-calc(10) !default;
@@ -241,8 +253,8 @@ $include-html-global-classes: $include-html-classes;
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: $font-weight-normal;
 // $paragraph-font-size: 1rem;
-//$paragraph-line-height: rem-calc(26);
-//$paragraph-margin-bottom: rem-calc(26);
+$paragraph-line-height: rem-calc(26);
+$paragraph-margin-bottom: rem-calc(26);
 // $paragraph-aside-font-size: rem-calc(14);
 // $paragraph-aside-line-height: 1.35;
 // $paragraph-aside-font-style: italic;
@@ -259,8 +271,8 @@ $include-html-global-classes: $include-html-classes;
 // $code-padding: rem-calc(2) rem-calc(5) rem-calc(1);
 
 // We use these to style anchors
-//$anchor-text-decoration: underline;
-//$anchor-text-decoration-hover: none;
+$anchor-text-decoration: underline;
+$anchor-text-decoration-hover: none;
 // $anchor-font-color: $primary-color;
 // $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
 
@@ -453,7 +465,7 @@ $include-html-global-classes: $include-html-classes;
 // We use these to control button border and hover styles.
 // $button-border-width: 0px;
 // $button-border-style: solid;
-//$button-bg-color: $primary-color;
+$button-bg-color: $primary-color;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
@@ -977,7 +989,7 @@ $include-html-global-classes: $include-html-classes;
 // $panel-font-color-alt: $white;
 
 // $panel-header-adjust: true;
-//$callout-panel-link-color:$secondary-color;
+$callout-panel-link-color:$secondary-color;
 
 // 22. Pricing Tables
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -1371,11 +1383,11 @@ $include-html-global-classes: $include-html-classes;
 
 // Background color for the top bar
 // $topbar-bg-color: $oil;
-// $topbar-bg: $topbar-bg-color;
+$topbar-bg-color: $primary-color;
 
 // Height and margin
-// $topbar-height: rem-calc(45);
-// $topbar-margin-bottom: 0;
+$topbar-height: rem-calc(40);
+$topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: $font-weight-normal;
@@ -1384,8 +1396,8 @@ $include-html-global-classes: $include-html-classes;
 // Style the top bar dropdown elements
 // $topbar-dropdown-bg: $oil;
 // $topbar-dropdown-link-color: $white;
-// $topbar-dropdown-link-bg: $oil;
-// $topbar-dropdown-link-bg-hover: $oil;
+$topbar-dropdown-link-bg: $primary-color; //background of dropdown menu
+$topbar-dropdown-link-bg-hover: scale-color($primary-color, $lightness: -14%);
 // $topbar-dropdown-link-weight: $font-weight-normal;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: $white;
@@ -1401,8 +1413,8 @@ $include-html-global-classes: $include-html-classes;
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
 // $topbar-link-bg-color-hover: $charcoal;
-// $topbar-link-bg-hover: $oil;
-// $topbar-link-bg-active: $primary-color;
+$topbar-link-bg-hover: scale-color($primary-color, $lightness: -14%);
+$topbar-link-bg-active: scale-color($primary-color, $lightness: 4%);
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 // $topbar-link-font-family: $body-font-family;
 // $topbar-link-text-transform: none;
