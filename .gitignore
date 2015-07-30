@@ -2,7 +2,7 @@
 node_modules/
 *.sass-cache*
 bower_components/
-stylesheets/*.css
 *.log
 *.map
 *.png
+vendor/
