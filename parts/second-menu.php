@@ -1,7 +1,7 @@
 <div class="harvey-sub-head-wrap">
     <div class="row">
         <div class="large-4 small-12 columns">
-            <a href="/"></a><img src="/wp-content/themes/HarveysFoundationPress/assets/img/Harveys_logo.png" width="250" height="58"></a>
+            <a href="/"><img src="/wp-content/themes/HarveysFoundationPress/assets/img/Harveys_logo.png" width="250" height="58"></a>
         </div>
         <div class="large-8 small-12 columns">
             <ul class="secondary-menu right">

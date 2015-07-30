@@ -2,8 +2,8 @@
 if (!function_exists('foundationpress_sidebar_widgets')) :
 function foundationpress_sidebar_widgets() {
   register_sidebar(array(
-      'id' => 'sidebar-widgets',
-      'name' => __('Sidebar widgets', 'FoundationPress'),
+      'id' => 'sidebar-1',
+      'name' => __('Main Sidebar', 'FoundationPress'),
       'description' => __('Drag widgets to this sidebar container.', 'FoundationPress'),
       'before_widget' => '<article id="%1$s" class="row widget %2$s"><div class="small-12 columns">',
       'after_widget' => '</div></article>',
