@@ -11,13 +11,13 @@
  *
  * @package WordPress
  * @subpackage FoundationPress
- * @since FoundationPress 1.0
+ * @since FoundationPress 1.0.0
  */
 
 get_header(); ?>
 
 <div class="row">
-	<div class="small-12 large-8 columns" role="main">
+	<?php get_template_part( 'parts/check-if-sidebar-exist' ); ?>
 
 	<?php if ( have_posts() ) : ?>
 

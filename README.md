@@ -8,145 +8,120 @@ All contributions are welcome!
 
 ## Requirements
 
-**A brief explanation to the requirements** (feel free to skip this if you're a pro):
+**Please read this. It's totally worth it.**
 
-Back in the days we wrote all styles in the style.css file. Then we realized that this could quickly create clutter and confusion, especially in larger projects. Foundation uses SASS (equivalent to LESS, used in Bootstrap). In short, SASS is a CSS pre-processor that allows you to write styles more effectively and tidy.
+FoundationPress uses [Sass](http://Sass-lang.com/) (CSS with superpowers). In short, Sass is a CSS pre-processor that allows you to write styles more effectively and tidy.
 
-To compile SASS files into one style sheet, we use a tool called Grunt. In short, Grunt is a task runner that automates repetitive tasks like minification, compilation, linting, etc. Grunt and Grunt plugins are installed and managed via npm, the Node.js package manager. Before setting up Grunt ensure that your npm is up-to-date by running ```npm update -g npm``` (this might require ```sudo``` on certain systems)
+All the Sass (.scss) files are compiled into one single css file. To make this happen, we use a tool called Grunt; a task runner that automates repetitive tasks like minification, compilation, linting, etc.
 
-Bower is a package manager used by Zurb to distribute Foundation. When you have Bower installed, you will be able to run ```foundation update``` in the terminal to update Foundation to the latest version. (After an upgrade you must run ```npm run build``` to recompile files).
-
-
-**Okay, so you'll need to have [Node.js](http://nodejs.org) installed before continuing.**
-
-**And that is it.**
-
-Many project force their users to install [Bower](http://bower.io) and [Grunt](http://gruntjs.com/) globally. We don't like that and decided to use them via `npm scripts` which means, that Grunt and Bower are installed in your `node_modules` folder and we'll call them there.
-
-Haven't used this approach yet? Read on.
+**NOTE: You'll need to have [Node.js](http://nodejs.org) installed before continuing.**
 
 ## Quickstart
 
+### 1. Clone the repository and install dependencies with npm
 ```bash
 $ cd my-wordpress-folder/wp-content/themes/
 $ git clone git@github.com:olefredrik/FoundationPress.git
 $ mv FoundationPress your-theme-name
 $ cd your-theme-name
 
-# will call:
-# bower install && grunt build
-# afterwards
-# check `package.json` `scripts`
-# for further information
 $ npm install
+# bower install && grunt build will be called via npm scripts when you run npm install.
 ```
 
-**Tip:**
-If you get an error saying Permission denied (publickey) when cloning the repository, use the https protocol instead:
-```git clone https://github.com/olefredrik/FoundationPress.git```
+(Many project force their users to install [Bower](http://bower.io) and [Grunt](http://gruntjs.com/) globally. We don't like that and decided to use them via `npm scripts` which means, that Grunt and Bower are installed in your `node_modules` folder and we'll call them there.)
 
-While you're working on your project, run:
+
+
+### 2. While you're working on your project, run:
 
 ```bash
-# will call:
-# grunt watch
-#
-# predefined in `package.json`
 $ npm run watch
 ```
 
-For building all the assets, run:
+### 3. For building all the assets, run:
 
 ```bash
-# will call:
-# grunt build
-#
-# predefined in `package.json`
 $ npm run build
 ```
 
-And you're set!
+### 4. Compress all files required for deployment:
+It is not recommended that you deploy the entire theme folder to your webserver. There is no danger associated with doing this, but it is a waste of disk space and bandwidth. The node_modules and components for instance is only required during theme development.
 
-Check for Foundation Updates? Run:
-`$ foundation update`
-(this requires the foundation gem to be installed in order to work. Please see the [docs](http://foundation.zurb.com/docs/sass.html) for details.)
+By executing the command below, you will compress only the files that are required for deployment. The file will be available as a .zip inside the folder named '/package'.
 
-Wanna run a custom grunt task? Run:
 ```bash
-# will call:
-# grunt sass
-$ npm run grunt -- sass
-
-# will call:
-# grunt copy
-$ npm run grunt -- copy
+$ npm run package
 ```
 
-### Stylesheet Folder Structure
+
+### How to structure your styles
 
   * `style.css`: Do not worry about this file. (For some reason) it's required by WordPress. All styling are handled in the Sass files described below
 
-  * `scss/foundation.scss`: Imports for Foundation components and your custom styles.
-  * `scss/config/_settings.scss`: Original Foundation 5 base settings
-  * `scss/config/_custom-settings.scss`: Copy the settings you will modify to this file. Make it your own
-  * `scss/site/*.scss`: Unleash your creativity and make it look perfect. Create the files you need (and remember to make import statements for all your files in scss/foundation.scss)
+  * `assets/scss/foundation.scss`: Imports for Foundation components and your custom styles.
+  * `assets/scss/config/_settings.scss`: Original Foundation 5 base settings
+  * `assets/scss/config/_custom-settings.scss`: Copy the settings you will modify to this file. Make it your own
+  * `assets/scss/site/*.scss`: Unleash your creativity. Create the files you need (and remember to make import statements for all your files in assets/scss/foundation.scss)
 
-  * `css/foundation.css`: All Sass files are minified and compiled to this file
-  * `css/foundation.css.map`: CSS source maps
+Please note that you **must** run `$npm run build` in your terminal for the styles to be copied and concatinated. See [Gruntfile.js](https://github.com/olefredrik/FoundationPress/blob/master/Gruntfile.js) for details
 
-### Script Folder Strucutre
+### How to structure your scripts
 
-  * `bower_components/`: This is the source folder where all Foundation components are located. `foundation update` will check and update scripts in this folder.
+* `assets/javascript/custom`: This is the folder where you put all your custom scripts. Every .js file you put in this directory will be minified and concatinated one single .js file. (This is good for site speed and performance)
 
-  * `js/custom`: This is where you put all your custom scripts. Every .js file you put in this directory will be minified and concatinated to [foundation.js](https://github.com/olefredrik/FoundationPress/blob/master/js/foundation.js)
+Please note that you must run `npm run build` in your terminal for the scripts to be copied and concatinated. See [Gruntfile.js](https://github.com/olefredrik/FoundationPress/blob/master/Gruntfile.js) for details
 
-  * `js/vendor`: Vendor scripts are copied from `bower_components/` to this directory. We use this path for enqueing the vendor scripts in WordPress.
+### The styles and scripts generated by the build
 
-  * Please note that you must run `npm run build` in your terminal for the script to be copied and concatinated. See [Gruntfile.js](https://github.com/olefredrik/FoundationPress/blob/master/Gruntfile.js) for details
+Version control on these files are turned off because they are automatically generated as part of the build process.
+
+* `assets/stylesheets/foundation.css`: All Sass files are minified and compiled to this file
+* `assets/stylesheets/foundation.css.map`: CSS source maps
+
+* `assets/javascript/vendor`: Vendor scripts are copied from `assets/javascript/components/` to this directory. We use this path for enqueing the vendor scripts in WordPress.
 
 ## Demo
 
 * [Clean FoundationPress install](http://foundationpress.olefredrik.com/)
 * [FoundationPress Kitchen Sink - see every single element in action](http://foundationpress.olefredrik.com/kitchen-sink/)
 
-## Unit Testing With Travis CI
+## Unit Testing With Travis-CI
 
-FoundationPress is completely ready to be deployed to and tested by Travis CI for WordPress Coding Standards and best practices. All you need to do to activate the test is sign up and follow the instructions to point Travis CI towards your repo. Just don't forget to update the status badge to point to your repositories unit test.
-[Travis CI](https://travis-ci.org/)
+FoundationPress is completely ready to be deployed to and tested by Travis-CI for WordPress Coding Standards and best practices. All you need to do to activate the test is sign up and follow the instructions to point Travis-CI towards your repo. Just don't forget to update the status badge to point to your repositories unit test.
+[Travis-CI](https://travis-ci.org/)
 
 ## UI toolkits for rapid prototyping
 
 * [Foundation UI Kit for Axure RP](https://gumroad.com/l/foundation-ui-kit-axure-rp)
 * [FoundationPSD - Foundation UI Kit for Photoshop](http://foundationpress.olefredrik.com/downloads/foundation-psd-template/)
 
-## Tutorials and reviews
+## Tutorials
 
+* [FoundationPress for beginners](https://foundationpress.olefredrik.com/posts/tutorials/foundationpress-for-beginners/)
 * [Responsive images in WordPress with Interchange](http://rachievee.com/responsive-images-in-wordpress/)
-* [Integration guide for Sensei LMS plugin from WooThemes](https://support.woothemes.com/hc/en-us/articles/204125559-FoundationPress)
 * [Build a Responsive WordPress theme](http://www.webdesignermag.co.uk/build-a-responsive-wordpress-theme/)
-* [Setting Up a Blog with Foundation and WordPress](http://www.thecodecub.com/htmlcss/setting-up-a-blog-with-foundation-and-wordpress/)
-* [FoundationPress un starter theme pour WordPress (fr)](http://www.leblogduresponsivedesign.fr/developpement/foundationpress-un-starter-theme-pour-wordpress/)
 * [Learn to use the _settings file to change almost every aspect of a Foundation site](http://zurb.com/university/lessons/66)
 * [Other lessons from Zurb University](http://zurb.com/university/past-lessons)
 
-## A selection of sites built with FoundationPress
+## Showcase
 
 * [Harvard Center for Green Buildings and Cities](http://www.harvardcgbc.org/)
+* [INTI International University & Colleges](http://international.newinti.edu.my/)
+* [Conservative Leadership Conference](http://civitasclc.com/)
+* [The New Tropic](http://thenewtropic.com/)
 * [Parent-Child Home Program](http://www.parent-child.org/)
 * [Hip and Healthy](http://hipandhealthy.com/)
 * [Threadbird blog](http://blog.threadbird.com/)
-* [Public House Wines](http://publichousewines.hstestsite.info/)
+* [Public House Wines](http://publichousewine.com/)
 * [Franchise Career Advisors](http://franchisecareeradvisors.com/)
 * [Le saint](http://www.lesaint.ca/)
 * [Help blog](http://help.com/blog/)
 * [Maren Schmidt](http://marenschmidt.com/)
 * [Ciancimino Gallery](http://ciancimino.com/)
-* [Sokolove Law](http://www.sokolovelaw.com/)
-* [Pandora Children's Parties](http://www.pandorachildrensparties.co.uk/)
 * [The Rainbow Venues](http://www.therainbowvenues.co.uk/)
 * [Ameronix](http://www.ameronix.com/)
 * [Finnerodja](http://www.finnerodja.se/)
-* [Nufloors](http://www.nufloors.ca/)
 * [Glossop Cartons](http://www.glossopcartons.co.uk/)
 * [Ready4Work](http://www.ready4work.my/)
 * [Just Legal](http://www.justlegal.co.jp/en/)
@@ -155,7 +130,8 @@ FoundationPress is completely ready to be deployed to and tested by Travis CI fo
 * [WP Diamonds](http://www.wpdiamonds.com/)
 * [Storm Arts](http://stormarts.fi/)
 * [USS Illinois](http://ussillinois.org/)
-* [INTI International University & Colleges](http://international.newinti.edu.my/)
+
+>Credit goes to all the brilliant designers and developers out there. Have **you** made a site that should be on this list? [Please let me know](https://twitter.com/olefredrik)
 
 ## Contributing
 #### Here are ways to get involved:
@@ -173,6 +149,7 @@ Pull requests are highly appreciated. More than three dozen amazing people have 
 1. Solve a problem. Features are great, but even better is cleaning-up and fixing issues in the code that you discover
 2. Make sure that your code is bug-free and does not introduce new bugs
 3. Create a [pull request](https://help.github.com/articles/creating-a-pull-request)
+4. Verify that all the Travis-CI build checks have passed
 
 ## Documentation
 

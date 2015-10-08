@@ -6,25 +6,38 @@
  *
  * @package WordPress
  * @subpackage FoundationPress
- * @since FoundationPress 1.0
+ * @since FoundationPress 1.0.0
  */
 
 ?>
 
 </section>
-<aside class="row">
-	<?php do_action('foundationPress_before_footer'); ?>
-	<?php dynamic_sidebar("footer-widgets"); ?>
-	<?php do_action('foundationPress_after_footer'); ?>
-</aside>
-<a class="exit-off-canvas"></a>
+<div id="footer-container">
+	<footer id="footer">
+		<?php do_action( 'foundationpress_before_footer' ); ?>
+		<?php dynamic_sidebar( 'footer-widgets' ); ?>
+		<?php do_action( 'foundationpress_after_footer' ); ?>
+	</footer>
+</div>
 
-	<?php 
-    get_template_part('parts/footer-area');
-    do_action('foundationPress_layout_end');
-    ?>
+<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'offcanvas' ) : ?>
+
+<a class="exit-off-canvas"></a>
+<?php endif; ?>
+
+
+<?php 
+get_template_part('parts/footer-area');
+do_action('foundationPress_layout_end');
+?>
+
+
+<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'offcanvas' ) : ?>
+
 	</div>
 </div>
+<?php endif; ?>
+
 <?php wp_footer(); ?>
 <?php do_action( 'foundationpress_before_closing_body' ); ?>
 </body>

@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage FoundationPress
- * @since FoundationPress 1.0
+ * @since FoundationPress 1.0.0
  */
 
 if ( ! function_exists( 'foundationpress_start_cleanup' ) ) :
@@ -120,7 +120,7 @@ endif;
 
 // Remove injected CSS from gallery.
 if ( ! function_exists( 'foundationpress_gallery_style' ) ) :
-function foundationpress_gallery_style($css) {
+function foundationpress_gallery_style( $css ) {
 	return preg_replace( "!<style type='text/css'>(.*?)</style>!s", '', $css );
 }
 endif;
@@ -178,9 +178,9 @@ if ( ! class_exists( 'Foundationpress_img_rebuilder' ) ) :
 	          'aligncenter',
 	        );
 
-	        if ( in_array( $class_segs[0], $allowed_classes ) ) {
-	          $img .= ' class="' . $class_segs[0] . '"';
-	        }
+		if ( $filtered_classes = array_intersect( $class_segs, $allowed_classes ) ) {
+			$img .= ' class="' . implode(' ', $filtered_classes) . '"';
+		}
 
 	        // Finish up the img tag
 	        $img .= ' />';
@@ -206,7 +206,7 @@ if ( ! class_exists( 'Foundationpress_img_rebuilder' ) ) :
 	   */
 	  public function the_content( $html ) {
 	    return preg_replace_callback(
-	      '|(<img.*/>)|',
+	      '|(<img[^>]*>)|',
 	      array( $this, 'the_content_callback' ),
 	      $html
 	    );
@@ -264,4 +264,9 @@ if ( ! class_exists( 'Foundationpress_img_rebuilder' ) ) :
 
 endif;
 
+// Add WooCommerce support for wrappers per http://docs.woothemes.com/document/third-party-custom-theme-compatibility/
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+add_action('woocommerce_before_main_content', 'foundationpress_before_content', 10);
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+add_action('woocommerce_after_main_content', 'foundationpress_after_content', 10);
 ?>

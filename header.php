@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage FoundationPress
- * @since FoundationPress 1.0
+ * @since FoundationPress 1.0.0
  */
 
 ?>
@@ -36,39 +36,30 @@
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/css/foundation.css" />
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C700%7CRoboto+Slab%3A400%2C700&#038' rel='stylesheet' type='text/css'>
 		<link rel="icon" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/favicon.ico" type="image/x-icon">
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-144x144-precomposed.png">
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-114x114-precomposed.png">
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-72x72-precomposed.png">
-		<link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-precomposed.png">
-		
+
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
 	<?php do_action( 'foundationpress_after_body' ); ?>
-	
+
+	<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'offcanvas' ) : ?>
+
 	<div class="off-canvas-wrap" data-offcanvas>
 	<div class="inner-wrap">
-	
-	<?php do_action('foundationPress_layout_start'); ?>
-        <?php get_template_part('parts/second-menu');?>
-	<nav class="tab-bar hide-for-large-up">
-        <!-- was show-for-small-only -->
-	<?php do_action( 'foundationpress_layout_start' ); ?>
-	
-	<nav class="tab-bar">
-		<section class="left-small">
-			<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
-		</section>
-		<section class="middle tab-bar-section">
-			
-			<h1 class="title">
-				<?php bloginfo( 'name' ); ?>
-			</h1>
 
-		</section>
-	</nav>
+	<?php endif; ?>
 
-	<?php get_template_part( 'parts/off-canvas-menu' ); ?>
+	<?php 
+	do_action( 'foundationpress_layout_start' ); 
+	get_template_part('parts/second-menu');
+	?>
+
+	<?php
+
+		if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'offcanvas' ) :
+		get_template_part( 'parts/off-canvas-menu' );
+		endif;
+	?>
 
 	<?php get_template_part( 'parts/top-bar' ); ?>
 

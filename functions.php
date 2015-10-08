@@ -12,7 +12,7 @@
  * @link https://codex.wordpress.org/Theme_Development
  * @package WordPress
  * @subpackage FoundationPress
- * @since FoundationPress 1.0
+ * @since FoundationPress 1.0.0
  */
 
 /** Various clean up functions */
@@ -42,11 +42,13 @@ require_once( 'library/enqueue-scripts.php' );
 /** Add theme support */
 require_once( 'library/theme-support.php' );
 
-/** Add Header image */
-require_once( 'library/custom-header.php' );
+/** Add Nav Options to Customer */
+require_once( 'library/custom-nav.php' );
+
+/** Add protocol relative theme assets */
+require_once( 'library/protocol-relative-theme-assets.php' );
 
 // Harveys custom functions
 require_once('library/harveys-custom-functions.php');
 
 ?>
-
