@@ -35,10 +35,10 @@ padding: 0 rem-calc(8) 0 0;
 
 .secondary-menu li:last-child {
 border-right: none;
+}
 
 .top-bar-section li.active:not(.has-form) a:hover:not(.button) {
 	background: #202020;
-
 }
 
 // Switch between the mobile menu (tab-bar) and desktop menu (topbar) based on a custom $topbar-breakpoint value.
